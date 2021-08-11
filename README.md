@@ -23,9 +23,11 @@ This goal is achieved by generating desired Doppler weather spectra, characteriz
 1. Zero moment: total power reflectivity;
 2. First moment: mean Doppler velocity [m/s];
 3. Second moment: spectral width [m/s];
+
 where Doppler weather spectra is assumed to follow a Gaussian distribution shape. Next, Doppler data is transformed 
 (using ifft) in time domain and used as input for the the data model used for a phased array antenna:
 * Y = S*X+N
+
 ,where time domain signals (ground truth) are stored in matrix X, S is a matrix of array response vectors, a(theta(k)), 
 and N is i.i.d. Gaussian noise. The role of the beamforming algorithms is to estimate X from Y, when Y is noisy.
 
